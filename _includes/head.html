@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="Expires" content="-1"> 
+<meta http-equiv="Pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="No-Cache"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+{% assign meta_title = site.title %}
+{% assign meta_author = site.author %}
+{% assign meta_description = site.description %}
+{% assign meta_url = site.url %}
+{% assign meta_image = site.image %}
+{% assign meta_type = 'website' %}
+<meta name="author" content="{{ meta_author }}"/>
+<meta name="description" content="{{ meta_description }}"/>
+<meta property="og:site_name" content="{{ site.title }}"/>
+<meta property="og:type" content="{{ meta_type }}"/>
+<meta property="og:title" content="{{ meta_title }}"/>
+<meta property="og:description" content="{{ meta_description }}"/>
+<meta property="og:url" content="{{ meta_url }}"/>
+<meta property="og:image" content="{{ meta_image }}"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="{{ meta_title }}"/>
+<meta name="twitter:description" content="{{ meta_description }}"/>
+<meta name="twitter:label1" content="Written by"/>
+<meta name="twitter:data1" content="{{ meta_author }}"/>
+<!--<meta name="twitter:label2" content="Filed under"/>-->
+<!--<meta name="twitter:data2" content="{{ page.tags | join: ','}}"/>-->
+<meta name="twitter:image:src" content="{{ meta_image }}"/>
+<title>{{ meta_title }}</title>
+<link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700,800">
+<link rel="stylesheet" type="text/css" href="{{ site.asset_url }}/css/app.css">

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="ko" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>	<html lang="ko" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>	<html lang="ko" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>	<html lang="ko" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ko" class="no-js"> <!--<![endif]-->
+<head>
+    {% include head.html %}
+</head>
+<body class="{{ page.layout | append: '-template' }}">
+    <div id="wrap" class="wrap">
+        {% include header.html %}
+        {% include aside.html %}
+		<main class="ctn">
+            {{ content }}
+        </main>
+        {% include footer.html %}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ site.asset_url }}/js/modernizr.min.js"></script>
+    <script src="{{ site.asset_url }}/js/app.js"></script>
+</body>
+</html>
