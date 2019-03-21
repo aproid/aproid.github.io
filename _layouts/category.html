@@ -1,10 +1,17 @@
 ---
 layout: master
 ---
-{% assign post_length = 0 %} {% for post in site.posts %} {% if post.category contains page.name %} {% assign post_length = post_length | plus:1 %} {% endif %} {% endfor %}
-<div class="ctn-category">{{ page.name }} <small>{{ post_length }}</small></div>
+{% assign total_posts = 0 %}
 {% for post in site.posts %}
-    {% if post.category contains page.name %}
-        {% include item.html %}
+    {% if post.category contains page.title %}
+        {% assign total_posts = total_posts | plus: 1 %}
     {% endif %}
 {% endfor %}
+<div class="ctn-category">{{ page.title }} <small>{{ total_posts }}</small></div>
+<div class="item-container">
+    {% for post in site.posts %}
+        {% if post.category contains page.title %}
+            {% include item.html %}
+        {% endif %}
+    {% endfor %}
+</div>

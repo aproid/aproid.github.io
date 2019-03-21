@@ -1,0 +1,42 @@
+$default-font-size: 14px;
+$default-spacing: rem(80px);
+$default-duration: .2s;
+$default-easing: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+$header-index: 100;
+$header-logo-font-size: 30px;
+$header-icon-hover-duration: $default-duration;
+$header-icon-hover-easing: $default-easing;
+$header-toggle-word-count: 10;
+
+$side-open-duration: $default-duration;
+$side-open-easing: $default-easing;
+$side-width: 360px;
+
+$search-font-size: $default-font-size;
+
+$item-title-font-size: 36px;
+$item-summary-font-size: 12px;
+$item-mobile-title-font-size: 24px;
+$item-mobile-title-line-height: 1.412;
+
+$article-width: 860px;
+$article-font-size: 20px;
+$article-line-height: 1.7;
+$article-separator-background: #CCC;
+$article-caps-line-occupy: 2;
+
+$comment-font-size: 18px;
+
+$content-category-font-size: 18px;
+
+$footer-font-size: 11px;
+
+$link-hover-duration: $default-duration;
+$link-hover-easing: $default-easing;
+$link-text-color: #000;
+$link-highlight-color: #000;
+
+$tint-hover-duration: .5s;
+$tint-hover-easing: $default-easing;
+$tint-background: rgba(255,255,255,1);

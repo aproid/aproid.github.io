@@ -1,0 +1,10 @@
+<div class="paginate-status">
+    <p class="infinite-scroll-request">LOADING...</p>
+    <p class="infinite-scroll-last">END</p>
+    <p class="infinite-scroll-error">NO MORE</p>
+</div>
+{% if paginator.total_pages > 1 %}
+    {% if paginator.next_page %}
+        <a class="paginate" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"></a>
+    {% endif %}
+{% endif %}

@@ -1,0 +1,53 @@
+.clearfix {
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+.pseudo-icon {
+	&::before, &::after {
+		content: '';
+		display: inline-block;
+		background: #000;
+	}
+}
+
+.font {
+	&-serif { font-family: 'Nanum Myeongjo', serif; }
+	&-monospace { font-family: 'Nanum Gothic Coding', monospace; }
+	&-icon { font-family: "Font Awesome 5 Free"; font-weight: 900; }
+}
+
+.flex {
+	&-center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.caps {
+    @extend .article-caps;
+    
+    &-en {
+        @extend .article-caps-en;
+    }
+}
+
+@function em($px, $from) {
+	@return ($px / $from) * 1em;
+}
+
+@function em-extend($parent, $child) {
+	@return em($parent + $child, $parent);
+}
+
+@function rem($px) {
+	@return ($px / $default-font-size) * 1rem;
+}
+
+@function space($mut: 1) {
+	@return ($default-spacing * $mut);
+}

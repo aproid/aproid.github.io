@@ -1,0 +1,204 @@
+$header-toggle-text-width: rem($default-font-size * $header-toggle-word-count);
+$header-toggle-icon-spacing: rem(5px);
+$header-toggle-width: rem($default-font-size + 4px);
+$header-toggle-height: $header-toggle-text-width - $header-toggle-width;
+$header-toggle-icon-width: $header-toggle-width / 2;
+$header-toggle-icon-before-offset: $header-toggle-text-width / 4 + $header-toggle-icon-spacing;
+$header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-toggle-icon-spacing;
+
+.hdr {
+    @extend .flex-center;
+    
+    position: absolute;
+    border-right: 1px solid #EEE;
+    top: 0;
+    left: 0;
+    width: space(1);
+    height: 100vh;
+    background: #FFF;
+    text-align: center;
+    
+    &-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: space(1);
+        height: space(1);
+        background: #000;
+        color: #FFF;
+        line-height: space(1);
+        font-size: rem($header-logo-font-size);
+            
+        &-full {
+            display: none;
+        }
+    }
+    
+    &-toggle {
+        @extend .flex-center;
+        
+        flex-direction: column;
+        padding-bottom: $header-toggle-width;
+        width: $header-toggle-width;
+        height: $header-toggle-height;
+        cursor: pointer;
+        
+        &-text {
+            transform: rotate(90deg);
+            backface-visibility: hidden;
+        }
+        
+        &-icon {
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: relative;
+                width: $header-toggle-icon-width;
+                height: 1px;
+                background: #000;
+                transition: transform
+                            $header-icon-hover-duration
+                            $header-icon-hover-easing;
+            }
+            &:before { top: $header-toggle-icon-before-offset; }
+            &:after { top: $header-toggle-icon-after-offset; }
+        }
+        
+        &:hover {
+            .hdr-toggle-icon {
+                &:before { transform: rotate(45deg); }
+                &:after { transform: rotate(-45deg); }
+            }
+        }
+    }
+    
+    &-top {
+        @extend .flex-center;
+        
+        position: absolute;
+        width: space(.375);
+        height: space(.5);
+        bottom: space(.25);
+        cursor: pointer;
+        
+        &-icon {
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                width: 1px;
+                background: #000;
+            }
+            
+            &:before {
+                transform: rotate(45deg);
+                transform-origin: 0 0;
+                height: 1rem;
+            }
+            
+            &:after {
+                height: space(.5);
+                margin-top: -1rem;
+            }
+        }
+    }
+}
+  
+@include side-opened() {
+    .hdr {
+        background: transparent;
+        border-right: 0;
+        // border-right: 1px solid #222;
+        color: #777;
+        
+        &-toggle:hover {
+            .hdr-toggle-icon {
+                &:before { transform: rotate(-45deg); }
+                &:after { transform: rotate(45deg); }
+            }
+        }
+        
+        &-toggle-icon,
+        &-top-icon {
+            &:before,
+            &:after {
+                background: #777;
+            }
+        }
+    }
+}
+
+@include down($responsive-tablet) {
+    .hdr {
+        border-right: 0;
+        width: 100vw;
+        height: space(.75);
+        background: #000;
+        
+        &-logo {
+            padding: 0 space(.25);
+            width: auto;
+            height: space(.75);
+            line-height: space(.75);
+            font-size: rem($header-logo-font-size * .5);
+            
+            &-full {
+                display: inline-block;
+            }
+        }
+        
+        &-toggle {
+            margin-left: auto;
+            padding-bottom: 0;
+            width: space(.75);
+            height: space(.75);
+            
+            & > span {
+                transform: none;
+            }
+            
+            &-text {
+                display: none;
+            }
+            
+            &-icon {
+                width: $header-toggle-icon-width;
+                height: 1px;
+                background: #FFF;
+                
+                &:before,
+                &:after {
+                    background: #FFF;
+                }
+                
+                &:before {
+                    top: -4px;
+                }
+                
+                &:after {
+                    top: 3px;
+                }
+            }
+        }
+        
+        &-top {
+            display: none;
+        }
+    }
+    
+    @include side-opened() {
+        .hdr {
+            border-right: 0;
+            background: #000;
+            
+            &-toggle-icon,
+            &-top-icon {
+                &:before,
+                &:after {
+                    background: #FFF;
+                }
+            }
+        }
+    }
+}

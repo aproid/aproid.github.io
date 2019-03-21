@@ -1,6 +1,11 @@
 ---
 layout: master
+pagination:
+    enabled: true
 ---
-{% for post in site.posts %}
-    {% include item.html %}
-{% endfor %}
+<div class="item-container">
+    {% for post in paginator.posts %}
+        {% include item.html %}
+    {% endfor %}
+</div>
+{% include paginate.html %}

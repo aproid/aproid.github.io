@@ -1,0 +1,11 @@
+@mixin side-closed($selector: '') {
+	body:not(.menu-open) #{$selector} {
+		@content;
+	}
+}
+
+@mixin side-opened($selector: '') {
+	.menu-open #{$selector} {
+		@content;
+	}
+}

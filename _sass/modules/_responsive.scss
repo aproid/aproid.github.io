@@ -1,0 +1,14 @@
+$responsive-tablet: 768px;
+$responsive-mobile: 480px;
+
+@mixin down($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin up($width) {
+    @media (min-width: $width + 1px) {
+        @content;
+    }
+}

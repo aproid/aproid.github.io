@@ -1,0 +1,25 @@
+.menu {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: space(1);
+    transform: translateX(0);
+    transition: transform
+                $default-duration
+                $default-easing;
+}
+
+@include side-opened() {
+    .menu {
+        transform: translateX($side-width);
+    }
+}
+
+@include down($responsive-tablet) {
+    @include side-opened() {
+        .menu {
+            transform: translateX(0);
+        }
+    }
+}

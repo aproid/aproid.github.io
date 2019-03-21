@@ -1,0 +1,47 @@
+.link {
+    position: relative;
+    line-height: 1;
+    color: $link-text-color;
+    transition: color
+                $link-hover-duration
+                $link-hover-easing;
+    
+    &::before {
+        content: attr(title);
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: .5em;
+        line-height: 0;
+        background: $link-highlight-color;
+        color: invert($link-highlight-color);
+        transition: padding
+                    $link-hover-duration
+                    $link-hover-easing,
+                    background
+                    $link-hover-duration
+                    $link-hover-easing,
+                    color
+                    $link-hover-duration
+                    $link-hover-easing;
+    }
+    
+    &:hover {
+        &::before {
+            padding: .55em 0 0 0;
+        }
+    }
+    
+    &-invert {
+        @extend .link;
+        
+        color: invert($link-text-color);
+        
+        &::before {
+            background: invert($link-highlight-color);
+            color: $link-highlight-color;
+        }
+    }
+}

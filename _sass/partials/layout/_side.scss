@@ -1,0 +1,105 @@
+.side {
+    position: absolute;
+    padding: space(1) space(.5);
+    top: 0;
+    left: 0;
+    width: space(4.5);
+    height: 100vh;
+    color: #777;
+    transform: translateX(-100%);
+    
+    &-close {
+        position: absolute;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        width: space(.75);
+        height: space(.75);
+        cursor: pointer;
+        
+        &-icon {
+            width: 10px;
+            height: 1px;
+            background: #777;
+            
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: relative;
+                width: 10px;
+                height: 1px;
+                background: #777;
+                transition: transform .2s ease;
+            }
+            &:before {
+                top: -4px;
+                transform: rotate(-45deg);
+            }
+            &:after {
+                top: 3px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    
+    &-item {
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(0,0,0,.2);
+            margin: 0 0 space(.5);
+            padding: 0 0 space(.5);
+        }
+    }
+    
+    &-links {
+        font-size: rem(24px);
+        
+        a {
+            display: inline-block;
+            
+            &:not(:first-child) {
+                margin-top: 1rem;
+            }
+        }
+    }
+    
+    &-category {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 24px;
+            
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@include down($responsive-tablet) {
+    .side {
+        background: #222;
+        transition: transform
+                    $default-duration
+                    $default-easing;
+    }
+    
+    @include side-opened() {
+        .side {
+            transform: translateX(0);
+        }
+    }
+}
+
+@include down(space(4.5)) {
+    .side {
+        width: 100vw;
+    }
+    
+    .side-close {
+        display: flex;
+    }
+}

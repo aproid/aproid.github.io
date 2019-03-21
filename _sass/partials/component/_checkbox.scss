@@ -1,0 +1,21 @@
+.chkbox {
+    display: none;
+    
+    &-icon {
+        &-lock {
+            @extend .chkbox-icon;
+            
+            &:after {
+                content: '\f09c';
+                
+                .chkbox:checked + & {
+                    content: '\f023';
+                }
+            }
+        }
+        
+        &:after {
+            @extend .font-icon;
+        }
+    }
+}

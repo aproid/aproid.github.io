@@ -1,4 +1,0 @@
----
-id: programming
-name: Programming
----

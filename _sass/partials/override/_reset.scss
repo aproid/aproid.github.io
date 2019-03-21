@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    @extend .font-monospace;
+    
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    word-break: keep-all;
+    background: #222;
+    font-size: $default-font-size;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+code {
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 2px 4px;
+    white-space: nowrap;
+    vertical-align: text-bottom;
+    font-family: 'Consolas', monospace;
+    font-size: .7em;
+    font-weight: 700;
+}
+
+figure {
+    margin: 0;
+}
+
+b, strong {
+    font-weight: 800;
+}

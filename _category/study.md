@@ -1,4 +1,0 @@
----
-id: study
-name: Study
----
