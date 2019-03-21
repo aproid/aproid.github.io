@@ -7,8 +7,10 @@ $header-toggle-icon-before-offset: $header-toggle-text-width / 4 + $header-toggl
 $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-toggle-icon-spacing;
 
 .hdr {
-    @extend .flex-center;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     border-right: 1px solid #EEE;
     top: 0;
@@ -19,9 +21,6 @@ $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-togg
     text-align: center;
     
     &-logo {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: space(1);
         height: space(1);
         background: #000;
@@ -37,6 +36,7 @@ $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-togg
     &-toggle {
         @extend .flex-center;
         
+        flex: 1;
         flex-direction: column;
         padding-bottom: $header-toggle-width;
         width: $header-toggle-width;
@@ -76,10 +76,9 @@ $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-togg
     &-top {
         @extend .flex-center;
         
-        position: absolute;
         width: space(.375);
         height: space(.5);
-        bottom: space(.25);
+        margin-bottom: space(.25);
         cursor: pointer;
         
         &-icon {
