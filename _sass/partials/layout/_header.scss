@@ -130,6 +130,7 @@ $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-togg
 
 @include down($responsive-tablet) {
     .hdr {
+        flex-direction: row;
         border-right: 0;
         width: 100vw;
         height: space(.75);
@@ -148,6 +149,7 @@ $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-togg
         }
         
         &-toggle {
+            flex: 0 0 auto;
             margin-left: auto;
             padding-bottom: 0;
             width: space(.75);
