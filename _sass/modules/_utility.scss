@@ -15,8 +15,8 @@
 }
 
 .font {
-	&-serif { font-family: 'Nanum Myeongjo', serif; }
-	&-monospace { font-family: 'Nanum Gothic Coding', monospace; }
+	&-serif { font-family: 'Nanum Myeongjo', 'Cambria', serif; }
+	&-monospace { font-family: 'Nanum Gothic Coding', 'Consolas', 'Malgun Gothic', monospace; }
 	&-icon { font-family: "Font Awesome 5 Free"; font-weight: 900; }
 }
 

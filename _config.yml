@@ -61,9 +61,9 @@ keep_files:
   - .git
   - .svn
 plugins:
-#  - jekyll-feed
-#  - jekyll-sitemap
-#  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
   
 # Plugin settings
 paginate: 10
