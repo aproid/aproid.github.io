@@ -58,6 +58,7 @@ comments: true
 
 따라서 성능을 최대로 발휘하려면 'Composite' 속성만 바꾸는 것이 최고의 방법입니다.
 다음 HTML & JS 코드기준으로 알아보도록 하겠습니다.
+
 ``` html
 <!-- .menu가 활성화 될 때, .wrap객체에 .menu-wrap클레스가 추가됨 -->
 <div class="wrap">

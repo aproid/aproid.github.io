@@ -4,12 +4,29 @@
 <meta http-equiv="Pragma" content="no-cache"> 
 <meta http-equiv="Cache-Control" content="No-Cache"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-{% assign meta_title = site.title %}
-{% assign meta_author = site.author %}
-{% assign meta_description = site.description %}
-{% assign meta_url = site.url %}
-{% assign meta_image = site.image %}
-{% assign meta_type = 'website' %}
+{% capture nl %}
+{% endcapture %}
+{%- if page.layout == 'post' or page.layout == 'page' -%}
+{%- assign meta_type = 'article' -%}
+{%- else -%}
+{%- assign meta_type = 'website' -%}
+{%- endif -%}
+{%- if page.layout == 'post' or page.layout == 'page' or page.layout == 'category' -%}
+{%- assign meta_title = page.title | append: ' — ' | append: site.title -%}
+{%- assign meta_author = page.author | default: site.author -%}
+{%- assign meta_description = page.excerpt | replace: nl, '' | strip_html | truncatewords: 75 -%}
+{%- assign meta_url = site.url | append: site.baseurl | append: page.url -%}
+{%- assign meta_image = page.thumbnail | default: site.image -%}
+{%- else -%}
+{%- assign meta_title = site.title -%}
+{%- assign meta_author = site.author -%}
+{%- assign meta_description = site.description | strip_html -%}
+{%- assign meta_url = site.url -%}
+{%- assign meta_image = site.image -%}
+{%- endif -%}
+{%- unless meta_image contains '://' -%}
+{%- assign meta_image = meta_image | prepend: site.url -%}
+{%- endunless -%}
 <meta name="author" content="{{ meta_author }}"/>
 <meta name="description" content="{{ meta_description }}"/>
 <meta property="og:site_name" content="{{ site.title }}"/>
@@ -23,12 +40,11 @@
 <meta name="twitter:description" content="{{ meta_description }}"/>
 <meta name="twitter:label1" content="Written by"/>
 <meta name="twitter:data1" content="{{ meta_author }}"/>
+<meta name="twitter:image:src" content="{{ meta_image }}"/>
 <meta name="google-site-verification" content="pB9gMbFqQr6cX4PNdIvtd7lBjPAE_9AfZPKgbtATne4" />
 <meta name="naver-site-verification" content="710898864e4d873e1ab8b9feee841606234cbf39"/>
-<!--<meta name="twitter:label2" content="Filed under"/>-->
-<!--<meta name="twitter:data2" content="{{ page.tags | join: ','}}"/>-->
-<meta name="twitter:image:src" content="{{ meta_image }}"/>
 <title>{{ meta_title }}</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/rss.xml" />
 <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml" />
 <link rel="alternate" type="application/sitemap+xml" href="{{ site.url }}/sitemap.xml" />

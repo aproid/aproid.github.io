@@ -6,13 +6,11 @@ description: >-
   알고보면 유용한 사람.
 baseurl: ""
 url: https://aproid.github.io
+image: /assets/img/logo.png
 
 # Frontend variables
 asset_url: /assets
-# cover: /assets/images/blog-cover.png
-# favicon: /assets/images/favicon.jpg
-# logo:
-# logo_dark:
+favion_url: /favicon.ico
 
 # Environment settings
 language: 'ko-kr'
@@ -70,10 +68,10 @@ paginate: 10
 paginate_path: "/:num/"
 feed:
   path: feed.xml
-  
 
 # Social settings
 github: [metadata]
 github_username: aproid
 twitter_username: ArtisanAproid
 disqus_username: aproid
+facebook_id: 100004092432143
