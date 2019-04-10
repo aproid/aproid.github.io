@@ -30,6 +30,7 @@ comments: true
 | font | font-family | font-size | font-weight |
 | white-space | line-height | vertical-align | float |
 | clear | | |
+{: class="u-oneline"}
 
 </div>
 
@@ -41,6 +42,7 @@ comments: true
 | background-image | background-position | background-repeat | background-size |
 | outline | outline-color | outline-style | outline-width |
 | border-radius | border-style | box-shadow | |
+{: class="u-oneline"}
 
 </div>
 
@@ -49,6 +51,7 @@ comments: true
 
 <div class="article-table">
 | transform | opacity |
+{: class="u-oneline"}
 
 </div>
 

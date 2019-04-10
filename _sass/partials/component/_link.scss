@@ -1,6 +1,7 @@
 .link {
     position: relative;
     line-height: 1;
+    white-space: nowrap;
     color: $link-text-color;
     transition: color
                 $link-hover-duration

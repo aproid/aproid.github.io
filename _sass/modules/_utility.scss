@@ -36,6 +36,12 @@
     }
 }
 
+.u {
+	&-oneline {
+		white-space: nowrap;
+	}
+}
+
 @function em($px, $from) {
 	@return ($px / $from) * 1em;
 }

@@ -17,6 +17,22 @@ comments: true
 	</div>
 	<div class="article-ctn">
         {{ content }}
+        {% if page.previous or page.next %}
+        	<div class="article-related">
+			    <div class="article-prev {% unless page.previous %}article-prev-nil{% endunless %}">
+				    {% if page.previous %}
+				    		<h3>Previous Post</h3>
+				    		<a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+				    {% endif %}
+		    	</div>
+		    	<div class="article-next {% unless page.next %}article-next-nil{% endunless %}">
+				    {% if page.next %}
+				    	<h3>Next Post</h3>
+				    	<a href="{{ page.next.url }}">{{ page.next.title }}</a>
+				    {% endif %}
+		    	</div>
+		    </div>
+	    {% endif %}
         {% if page.comments %}
         <div id="disqus_thread"></div>
 		<script>

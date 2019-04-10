@@ -77,7 +77,6 @@ $article-mobile-font-size: 16px;
 			table-layout: fixed;
 			border-spacing: 0;
 			font-size: rem(14px);
-			white-space: nowrap;
 			
 			tr:first-child td:first-child { border-top-left-radius: 2px; }
 			tr:first-child td:last-child { border-top-right-radius: 2px; }
@@ -126,11 +125,44 @@ $article-mobile-font-size: 16px;
 			max-width: 100%;
 		}
 	}
+	
+	&-related {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: space(1);
+	}
+	
+	&-prev,
+	&-next {
+		padding: space(.5) 0;
+		flex: 1 0 50%;
+		
+		h3 {
+			margin: 0;
+		}
+	}
+	
+	&-next {
+		text-align: right;
+	}
 }
 
 @include down($responsive-tablet) {
 	.article {
 		padding: 0 space(.5) space(.5);
+		
+		&-prev,
+		&-next {
+			width: 100%;
+			flex-basis: 100%;
+			text-align: center;
+		}
+		
+		&-prev-nil,
+		&-next-nil {
+			display: none;
+			padding: 0;
+		}
 	}
 }
 
