@@ -171,3 +171,9 @@ $article-mobile-font-size: 16px;
 		font-size: rem($article-mobile-font-size);
 	}
 }
+
+@include down($responsive-mini) {
+	.article {
+		padding: 0 space(.25) space(.25);
+	}
+}

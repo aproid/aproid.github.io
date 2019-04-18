@@ -1,5 +1,6 @@
 $responsive-tablet: 768px;
 $responsive-mobile: 480px;
+$responsive-mini: 320px;
 
 @mixin down($width) {
     @media (max-width: $width) {

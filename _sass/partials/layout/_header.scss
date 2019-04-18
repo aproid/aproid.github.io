@@ -38,8 +38,7 @@ $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-togg
         
         flex: 1;
         flex-direction: column;
-        padding-bottom: $header-toggle-width;
-        width: $header-toggle-width;
+        width: 100%;
         height: $header-toggle-height;
         cursor: pointer;
         
@@ -76,9 +75,8 @@ $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-togg
     &-top {
         @extend .flex-center;
         
-        width: space(.375);
-        height: space(.5);
-        margin-bottom: space(.25);
+        padding: space(.25) 0;
+        width: 100%;
         cursor: pointer;
         
         &-icon {
