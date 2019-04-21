@@ -17,6 +17,7 @@ comments: true
 	</div>
 	<div class="article-ctn">
         {{ content }}
+		{% include ccl.html %}
         {% if page.previous or page.next %}
         	<div class="article-related">
 			    <div class="article-prev {% unless page.previous %}article-prev-nil{% endunless %}">

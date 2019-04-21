@@ -71,7 +71,7 @@ $(function() {
 	});
 	
 	// Article Anchor Overrides
-	$article.find('a:not(.link)').each(function() {
+	$article.find('a:not(.link):not(.link-raw)').each(function() {
 		$(this).addClass('link');
 	});
 	

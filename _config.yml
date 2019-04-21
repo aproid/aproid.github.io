@@ -4,12 +4,13 @@ email: you171717@naver.com
 author: Aproid
 description: >-
   알고보면 유용한 사람.
-baseurl: ""
+baseurl: ''
 url: https://aproid.github.io
 image: /assets/img/logo.png
 
 # Frontend variables
 asset_url: /assets
+upload_url: /uploads
 favion_url: /favicon.ico
 
 # Environment settings
