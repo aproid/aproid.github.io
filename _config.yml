@@ -61,7 +61,6 @@ keep_files:
   - .svn
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
   
 # Plugin settings
