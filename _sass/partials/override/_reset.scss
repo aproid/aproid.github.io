@@ -37,3 +37,18 @@ figure {
 b, strong {
     font-weight: 800;
 }
+
+dl {
+    position: relative;
+    
+    dt {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    dd {
+        margin-left: 3em;
+        margin-bottom: .5em;
+    }
+}

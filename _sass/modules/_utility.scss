@@ -37,23 +37,11 @@
 }
 
 .u {
-	&-oneline {
-		white-space: nowrap;
-	}
-}
-
-@function em($px, $from) {
-	@return ($px / $from) * 1em;
-}
-
-@function em-extend($parent, $child) {
-	@return em($parent + $child, $parent);
-}
-
-@function rem($px) {
-	@return ($px / $default-font-size) * 1rem;
-}
-
-@function space($mut: 1) {
-	@return ($default-spacing * $mut);
+	&-oneline { white-space: nowrap; }
+	&-big { font-size: rem($article-font-size + 4px) }
+	&-bigger { font-size: rem($article-font-size + 8px) }
+	&-biggest { font-size: rem($article-font-size + 12px) }
+	&-small { font-size: rem($article-font-size - 4px) }
+	&-smaller { font-size: rem($article-font-size - 8px) }
+	&-smallest { font-size: rem($article-font-size - 12px) }
 }

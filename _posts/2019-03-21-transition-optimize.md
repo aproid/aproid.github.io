@@ -172,6 +172,11 @@ function OnTransitionEnd() {
 }
 ```
 
+**출처**
+: Smooth as Butter: Achieving 60 FPS Animations with CSS3. (2019). Retrieved from [Link][Source]
+{: class="u-small"}
+
 [Google Guide]: https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=ko
 [Will Change Support]: https://caniuse.com/#search=will-change
 [Will Change Knowledge]: https://dev.opera.com/articles/ko/css-will-change-property/
+[Source]: https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108

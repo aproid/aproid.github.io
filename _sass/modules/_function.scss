@@ -1,0 +1,15 @@
+@function em($px, $from) {
+	@return ($px / $from) * 1em;
+}
+
+@function em-extend($parent, $child) {
+	@return em($parent + $child, $parent);
+}
+
+@function rem($px) {
+	@return ($px / $default-font-size) * 1rem;
+}
+
+@function space($mut: 1) {
+	@return ($default-spacing * $mut);
+}
