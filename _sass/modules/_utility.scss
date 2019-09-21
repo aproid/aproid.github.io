@@ -36,7 +36,12 @@
     }
 }
 
+.ref {
+	@extend .article-ref;
+}
+
 .u {
+	&-block { display: block; }
 	&-oneline { white-space: nowrap; }
 	&-big { font-size: rem($article-font-size + 4px) }
 	&-bigger { font-size: rem($article-font-size + 8px) }

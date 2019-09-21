@@ -9,7 +9,6 @@ comments: true
 <span class="caps-en">C</span>SS3의 강력한 기능중 하나인 Transition, 
 하지만 대부분의 개발자는 Transition 사용의 주의점을 알지 못하고 사용하여 모바일같은 성능이 좋지 못한 기기에서 부드러운 효과를 보지 못하는 경우가 자주 보입니다. 
 이번 포스트에서는 Transition의 올바른 사용방법을 통해 성능을 향상시켜보도록 하겠습니다.<!--more-->
-<br>
 
 ## 스타일 적용 순서 이해하기
 웹브라우저가 HTML, CSS를 로드를 마친 후 CSS 속성은 4단계를 거치게 됩니다. 
@@ -30,8 +29,7 @@ comments: true
 | font | font-family | font-size | font-weight |
 | white-space | line-height | vertical-align | float |
 | clear | | |
-{: class="u-oneline"}
-
+{:.u-oneline}
 </div>
 
 ### 3. Paint
@@ -42,8 +40,7 @@ comments: true
 | background-image | background-position | background-repeat | background-size |
 | outline | outline-color | outline-style | outline-width |
 | border-radius | border-style | box-shadow | |
-{: class="u-oneline"}
-
+{:.u-oneline}
 </div>
 
 ### 4. Composite
@@ -51,12 +48,11 @@ comments: true
 
 <div class="article-table">
 | transform | opacity |
-{: class="u-oneline"}
-
+{:.u-oneline}
 </div>
 
 ## Transition 성능 향상의 원리
-위 순서에 따르면 'Layout' 속성을 바꾸면 'Paint', 'Composite' 순서를 거치기 때문에 성능 저하가 일어납니다. 이를 **Reflow**라고 합니다.
+위 순서에 따르면 'Layout' 속성을 바꾸면 'Paint', 'Composite' 순서를 거치기 때문에 성능 저하가 일어납니다. 이를 **Reflow**라고 합니다.<br>
 또한 'Paint' 속성을 바꾸면 'Composite' 순서를 거치기 때문에 성능 저하가 일어납니다. 이를 **Repaint**라고 합니다.
 
 따라서 성능을 최대로 발휘하려면 'Composite' 속성만 바꾸는 것이 최고의 방법입니다.
@@ -174,7 +170,7 @@ function OnTransitionEnd() {
 
 **출처**
 : Smooth as Butter: Achieving 60 FPS Animations with CSS3. (2019). Retrieved from [Link][Source]
-{: class="u-small"}
+{:.ref}
 
 [Google Guide]: https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=ko
 [Will Change Support]: https://caniuse.com/#search=will-change

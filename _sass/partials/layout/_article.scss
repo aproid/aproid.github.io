@@ -6,12 +6,13 @@ $article-10px: em($article-font-size - 10px, $article-font-size);
 $article-caps-size-px: ($article-font-size * $article-line-height * $article-caps-line-occupy) - ($article-caps-line-occupy * 3px);
 $article-caps-size-em: em(($article-font-size * $article-line-height * $article-caps-line-occupy) - ($article-caps-line-occupy * 3px), $article-font-size);
 $article-caps-8px: em(8px, $article-caps-size-px);
+$article-caps-4px: em(4px, $article-caps-size-px);
 
 $article-mobile-font-size: 16px;
 
 .article {
 	@extend .font-serif;
-		
+	
 	padding: 0 space(1) space(1);
 	font-size: rem($article-font-size);
 	line-height: $article-line-height;
@@ -55,7 +56,7 @@ $article-mobile-font-size: 16px;
 		line-height: 1.8;
 		
 		h1, h2, h3, h4, h5, h6 {
-			margin-top: 2em;
+			margin-top: 3em;
 			margin-bottom: 0;
 			font-weight: 800;
 		}
@@ -103,7 +104,7 @@ $article-mobile-font-size: 16px;
 		position: relative;
 		float: left;
 		top: 4px;
-		margin: 0 $article-caps-8px 0 0;
+		margin: 0 $article-caps-4px 0 0;
 		height: 1em;
 		line-height: 1em;
 		font-size: $article-caps-size-em;
@@ -111,18 +112,29 @@ $article-mobile-font-size: 16px;
 		&-en {
 			@extend .article-caps;
 			
-			top: 7px;
+			top: 4px;
+			margin: 0 $article-caps-8px 0 0;
 		}
+	}
+	
+	&-ref {
+		margin-top: space(1);
+		font-size: $article-18px;
 	}
 	
 	&-image {
 		position: relative;
 		display: block;
-		margin: 0 space(-1);
+		margin: space(.5) space(-1);
 		text-align: center;
 		
 		img {
 			max-width: 100%;
+		}
+		
+		figcaption {
+			font-size: $article-18px;
+			color: #777;
 		}
 	}
 	
@@ -150,6 +162,10 @@ $article-mobile-font-size: 16px;
 @include down($responsive-tablet) {
 	.article {
 		padding: 0 space(.5) space(.5);
+		
+		&-image {
+			margin: space(.5) space(-.5);
+		}
 		
 		&-prev,
 		&-next {

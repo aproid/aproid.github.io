@@ -30,7 +30,7 @@ permalink: /sitemap.xml
 	{% endfor %}
 	{% for category in site.category %}
 	<url>
-		<loc>{{ site.url }}{{ site.baseurl }}/{{ category.title | slugify }}</loc>
+		<loc>{{ site.url }}{{ site.baseurl }}/{{ category.title | slugify }}/</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>

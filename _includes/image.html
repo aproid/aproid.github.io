@@ -1,0 +1,11 @@
+{%- assign base_url = page.id | replace: '/', ' ' | lstrip | split: ' ' | join: '-' | prepend: '/uploads/' | append: '/' -%}
+<figure class="article-image" markdown="0">
+	{%- if include.raw_url -%}
+	<img src="{{ include.url | relative_url }}" alt="{{ include.alt }}">
+	{%- else -%}
+	<img src="{{ include.url | prepend: base_url | relative_url }}" alt="{{ include.alt }}">
+	{%- endif -%}
+	{%- if include.caption -%}
+	<figcaption>{{ include.caption }}</figcaption>
+	{%- endif -%}
+</figure>

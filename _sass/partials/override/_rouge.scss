@@ -1,7 +1,7 @@
 div.highlight {
     border: 1px solid #ddd;
     border-radius: 2px;
-    margin: 1rem 0;
+    margin: 2rem 0;
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -49,5 +49,9 @@ div.highlight {
     
     .rouge-code {
         width: 100%;
+    }
+    
+    .lineno {
+        user-select: none;
     }
 }
