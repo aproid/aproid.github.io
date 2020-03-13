@@ -9,15 +9,17 @@
     {% include head.html %}
 </head>
 <body class="{{ page.layout | append: '-template' }}">
-    <div class="menu">
-        {% include header.html %}
-        {% include aside.html %}
-    </div>
     <div class="wrap">
-		<main class="ctn">
-            {{ content }}
-        </main>
-        {% include footer.html %}
+        <div class="menu">
+            {% include header.html %}
+            {% include aside.html %}
+        </div>
+        <div class="body">
+    		<main class="ctn">
+                {{ content }}
+            </main>
+            {% include footer.html %}
+        </div>
     </div>
     <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/jquery-lazy@1.7.10/jquery.lazy.min.js"></script>

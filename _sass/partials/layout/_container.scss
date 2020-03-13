@@ -1,0 +1,70 @@
+.wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &-overlay {
+        overflow: hidden;
+    }
+}
+
+.menu {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: space(1);
+    transform: translateX(0) translateZ(0);
+    transition: transform
+                $default-duration
+                $default-easing;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 space(1);
+    height: 100%;
+    width: 100%;
+    transform: translateX(0);
+    transition: transform
+                $side-open-duration
+                $side-open-easing,
+                opacity
+                $default-duration
+                $default-easing;
+}
+
+@include side-opened() {
+    .menu {
+        transform: translateX($side-width);
+    }
+
+    .body {
+        transform: translateX($side-width);
+        opacity: .7;
+    }
+}
+
+@include down($responsive-tablet) {
+    .menu {
+        width: 100vw;
+    }
+
+    .body {
+        margin: space(.75) 0 0 0;
+        padding: 0;
+    }
+
+    @include side-opened() {
+        .menu {
+            transform: translateX(0);
+        }
+    }
+
+    @include side-opened() {
+        .body {
+            transform: translateX(0);
+        }
+    }
+}

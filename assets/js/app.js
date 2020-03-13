@@ -10,7 +10,9 @@ window.toTop = function() {
 $(function() {
 	// Element Variables
 	var $body = $('body'),
+		$wrap = $('.wrap'),
 		$menu = $('.menu'),
+		$side = $('.side'),
 		$article = $('.article-ctn');
 		
 	// Env Variables
@@ -53,7 +55,16 @@ $(function() {
 	}
 	
 	// Menu Events
+	$menu.on('transitionend webkitTransitionEnd oTransitionEnd', function(e) {
+		if(($menu.is(e.target) || $side.is(e.target))
+		&& !$body.hasClass('menu-open')) {
+			$wrap.removeClass('wrap-overlay');
+		}
+	});
+
 	$menu.on('click', '.hdr-toggle', function() {
+		$wrap.addClass('wrap-overlay');
+		
 		$body.toggleClass('menu-open');
 	});
 	

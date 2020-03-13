@@ -106,7 +106,6 @@ $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-togg
     .hdr {
         background: transparent;
         border-right: 0;
-        // border-right: 1px solid #222;
         color: #777;
         
         &-toggle:hover {
@@ -129,8 +128,9 @@ $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-togg
 @include down($responsive-tablet) {
     .hdr {
         flex-direction: row;
+        justify-content: space-between;
         border-right: 0;
-        width: 100vw;
+        width: 100%;
         height: space(.75);
         background: #000;
         
@@ -147,8 +147,7 @@ $header-toggle-icon-after-offset: $header-toggle-text-width / 3.5 + $header-togg
         }
         
         &-toggle {
-            flex: 0 0 auto;
-            margin-left: auto;
+            flex: 0 1 auto;
             padding-bottom: 0;
             width: space(.75);
             height: space(.75);

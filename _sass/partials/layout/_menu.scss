@@ -17,6 +17,10 @@
 }
 
 @include down($responsive-tablet) {
+    .menu {
+        width: 100%;
+    }
+
     @include side-opened() {
         .menu {
             transform: translateX(0);
