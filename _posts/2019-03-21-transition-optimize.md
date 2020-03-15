@@ -147,7 +147,7 @@ function toggle() {
 }
 
 function OnTransitionEnd() {
-	myMenu.classList.remove("menu-animatable");
+	$menu.classList.remove("menu-animatable");
 }
 ```
 ``` css

@@ -9,13 +9,17 @@
 		</form>
 		<ul id="jekyll_search_container" class="search-result"></ul>
 	</div>
-	<div class="side-item side-category">
+	<div class="side-item side-nav">
 		<ul>
 		    {% for category in site.category %}
-			    <li>
-			    	<a href="{{ category.url }}">{{ category.title }}</a>
-			    </li>
+			    <li><a href="{{ category.url }}">{{ category.title }}</a></li>
 	        {% endfor %}
         </ul>
+	</div>
+	<div class="side-item side-nav">
+		<ul>
+			<li><a href="/about">About</a></li>
+			<li><a href="https://aproid.000webhostapp.com/" target="_blank">Portfolio</a></li>
+		</ul>
 	</div>
 </aside>

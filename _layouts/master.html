@@ -7,6 +7,9 @@
 <html lang="ko" class="no-js"> <!--<![endif]-->
 <head>
     {% include head.html %}
+    {% if page.unique_css %}
+    <link rel="stylesheet" type="text/css" href="{{ site.asset_url }}/css/{{ page.unique_css }}.css">
+    {% endif %}
 </head>
 <body class="{{ page.layout | append: '-template' }}">
     <div class="wrap">
@@ -27,5 +30,8 @@
     <script src="https://unpkg.com/simple-jekyll-search@1.5.0/dest/simple-jekyll-search.min.js"></script>
     <script src="{{ site.asset_url }}/js/modernizr.min.js"></script>
     <script src="{{ site.asset_url }}/js/app.js"></script>
+    {% if page.unique_js %}
+    <script src="{{ site.asset_url }}/js/{{ page.unique_js }}.js"></script>
+    {% endif %}
 </body>
 </html>
