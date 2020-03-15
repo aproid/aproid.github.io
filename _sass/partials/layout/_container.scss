@@ -1,11 +1,8 @@
 .wrap {
     position: relative;
+    padding: 0 0 0 space(1);
     height: 100%;
     width: 100%;
-
-    &-overlay {
-        overflow: hidden;
-    }
 }
 
 .menu {
@@ -23,7 +20,8 @@
 .body {
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 space(1);
+    overflow-x: hidden;
+    overflow-y: auto;
     height: 100%;
     width: 100%;
     transform: translateX(0);
@@ -42,27 +40,27 @@
 
     .body {
         transform: translateX($side-width);
+        overflow-y: hidden;
         opacity: .7;
+        user-select: none;
     }
 }
 
 @include down($responsive-tablet) {
-    .menu {
-        width: 100vw;
-    }
-
-    .body {
+    .wrap {
         margin: space(.75) 0 0 0;
         padding: 0;
+    }
+
+    .menu {
+        width: 100vw;
     }
 
     @include side-opened() {
         .menu {
             transform: translateX(0);
         }
-    }
 
-    @include side-opened() {
         .body {
             transform: translateX(0);
         }

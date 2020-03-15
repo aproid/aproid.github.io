@@ -23,13 +23,13 @@ comments: true
 			    <div class="article-prev {% unless page.previous %}article-prev-nil{% endunless %}">
 				    {% if page.previous %}
 				    		<h3>Previous Post</h3>
-				    		<a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+				    		<a href="{{ page.previous.url }}" target="_self">{{ page.previous.title }}</a>
 				    {% endif %}
 		    	</div>
 		    	<div class="article-next {% unless page.next %}article-next-nil{% endunless %}">
 				    {% if page.next %}
 				    	<h3>Next Post</h3>
-				    	<a href="{{ page.next.url }}">{{ page.next.title }}</a>
+				    	<a href="{{ page.next.url }}" target="_self">{{ page.next.title }}</a>
 				    {% endif %}
 		    	</div>
 		    </div>
@@ -37,16 +37,16 @@ comments: true
         {% if page.comments %}
         <div id="disqus_thread"></div>
 		<script>
-		var disqus_config = function () {
-		this.page.url = '{{ site.url }}{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-		};
-		(function() {
-		var d = document, s = d.createElement('script');
-		s.src = 'https://{{ site.disqus_username }}.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-		})();
+			var disqus_config = function () {
+				this.page.url = '{{ site.url }}{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			(function() {
+				var d = document, s = d.createElement('script');
+				s.src = 'https://{{ site.disqus_username }}.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
 		</script>
 		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         {% endif %}

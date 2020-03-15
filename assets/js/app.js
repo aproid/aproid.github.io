@@ -3,7 +3,7 @@
 // Global Components
 window.dd = console.log.bind(console);
 window.toTop = function() {
-	$('html, body').scrollTop(0);
+	$('.body').scrollTop(0);
 }
 
 // On Document & jQuery Ready
@@ -58,14 +58,16 @@ $(function() {
 	$menu.on('transitionend webkitTransitionEnd oTransitionEnd', function(e) {
 		if(($menu.is(e.target) || $side.is(e.target))
 		&& !$body.hasClass('menu-open')) {
-			$wrap.removeClass('wrap-overlay');
+			$body.removeClass('menu-opening');
 		}
 	});
 
 	$menu.on('click', '.hdr-toggle', function() {
-		$wrap.addClass('wrap-overlay');
-		
 		$body.toggleClass('menu-open');
+
+		if($body.hasClass('menu-open')) {
+			$body.addClass('menu-opening');
+		}
 	});
 	
 	$menu.on('click', '.side-close', function() {
