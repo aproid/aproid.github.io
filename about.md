@@ -2,7 +2,8 @@
 layout: page
 title: About
 permalink: /about/
-unique_css: about
 ---
 
-공사중...
+<div class="about" markdown="0">
+	<div class="about-profile"></div>
+</div>

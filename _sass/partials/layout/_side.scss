@@ -88,6 +88,10 @@
                     $default-easing;
     }
     
+    .side-close {
+        display: flex;
+    }
+    
     @include side-opened() {
         .side {
             transform: translateX(0);
@@ -98,12 +102,5 @@
 @include down(space(4.5)) {
     .side {
         width: 100vw;
-    }
-    
-    .side-close {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
     }
 }
