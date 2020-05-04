@@ -47,7 +47,7 @@ var MODES_MAPPING = {
 	'mania' : 'mania'
 };
 
-var HOST = 'http://aproid.ddns.net:5002';
+var HOST = 'https://aproid.ddns.net:5002';
 
 var LOGIN, HASH_ID, HASH_PW;
 
