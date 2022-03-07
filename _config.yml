@@ -15,7 +15,6 @@ favion_url: /favicon.ico
 
 # Environment settings
 language: 'ko-kr'
-timezone: Asia/Seoul
 permalink: /:year/:month/:day/:title/
 excerpt_separator: <!--more-->
 
