@@ -12,10 +12,14 @@
     text-align: center;
     
     &:hover {
-        color: white;
+        color: #fff;
         
         .link {
             @extend .link-invert;
+        }
+
+        a {
+            color: #fff;
         }
     }
     
@@ -44,7 +48,7 @@
         @extend .tint-ctn;
     }
     
-    &-title,
+    &-title a,
     &-summary,
     &-date {
         transition: color
@@ -62,6 +66,7 @@
         margin: 0;
         font-size: rem($item-title-font-size);
         font-weight: 800;
+        color: #000;
     }
     
     &-summary {
