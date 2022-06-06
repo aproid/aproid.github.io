@@ -7,6 +7,7 @@ description: >-
 baseurl: ''
 url: https://aproid.github.io
 image: /assets/img/logo.png
+timezone: Asia/Seoul
 
 # Frontend variables
 asset_url: /assets
@@ -35,7 +36,7 @@ port: 8080
 markdown: kramdown
 kramdown: 
   parse_block_html: true
-  input:          GFM
+  input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: 'highlight'
