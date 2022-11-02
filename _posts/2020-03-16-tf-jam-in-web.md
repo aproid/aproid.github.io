@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "웹에서 Tensorflow를 활용한 농구 슈팅"
-date:   2020-03-16 00:43:00 +0900
+date:   2020-03-16 00:43:00
 category: [Programming]
 thumbnail: 
 comments: true

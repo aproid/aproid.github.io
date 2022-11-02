@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "CSS Transition 성능 최적화"
-date:   2019-03-21 22:33:00 +0900
+date:   2019-03-21 22:33:00
 category: [Programming]
 thumbnail: 
 comments: true

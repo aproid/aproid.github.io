@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "WebGL 바닥부터 해보기"
-date:   2019-09-15 22:41:00 +0900
+date:   2019-09-15 22:41:00
 category: [Programming]
 thumbnail: 
 comments: true

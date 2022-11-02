@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "개발 환경을 Dockerize 해본 경험"
-date:   2022-06-28 16:06:00 +0900
+date:   2022-06-28 16:06:00
 category: [Programming]
 thumbnail: 
 comments: true
