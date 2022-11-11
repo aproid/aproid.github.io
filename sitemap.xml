@@ -6,14 +6,20 @@ permalink: /sitemap.xml
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 		xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>{{ site.url }}{{ site.baseurl }}/</loc>
+		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
 	{% for post in site.posts %}
 	<url>
 		<loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
 		{% if post.date %}
 		<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 		{% endif %}
-		<changefreq>weekly</changefreq>
-		<priority>1.0</priority>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
 	</url>
 	{% endfor %}
 	{% for page in site.pages %}
@@ -23,15 +29,15 @@ permalink: /sitemap.xml
 			{% if page.date %}
 			<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
 			{% endif %}
-			<changefreq>{{ sitemap.freq | default: 'weekly' }}</changefreq>
-			<priority>{{ sitemap.priority | default: '1.0' }}</priority>
+			<changefreq>{{ sitemap.freq | default: 'daily' }}</changefreq>
+			<priority>{{ sitemap.priority | default: '0.8' }}</priority>
 		</url>
 		{% endif %}
 	{% endfor %}
 	{% for category in site.category %}
 	<url>
 		<loc>{{ site.url }}{{ site.baseurl }}/{{ category.title | slugify }}/</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>daily</changefreq>
 		<priority>0.8</priority>
 	</url>
 	{% endfor %}
