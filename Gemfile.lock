@@ -260,6 +260,7 @@ GEM
     unf_ext (0.0.8.2)
     unf_ext (0.0.8.2-x64-mingw32)
     unicode-display_width (1.8.0)
+    wdm (0.1.1)
     zeitwerk (2.6.4)
 
 PLATFORMS
@@ -271,6 +272,7 @@ DEPENDENCIES
   github-pages
   tzinfo (~> 1.2)
   tzinfo-data
+  wdm
 
 BUNDLED WITH
    2.1.4
