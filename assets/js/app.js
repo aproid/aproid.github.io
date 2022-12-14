@@ -92,6 +92,14 @@ $(function() {
 		this.setAttribute('target', '_blank');
 		this.setAttribute('rel', 'noopener noreferrer');
 	});
+
+	// Footnote Anchor Overrides
+	$article.find('a.footnote, .footnotes a').each(function() {
+		$(this).removeClass('link');
+
+		this.removeAttribute('target');
+		this.removeAttribute('rel');
+	});
 	
 	// Item Thumbnail Overrides
 	$('.item').each(function() {
