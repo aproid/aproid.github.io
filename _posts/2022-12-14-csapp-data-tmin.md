@@ -8,7 +8,7 @@ comments: true
 ---
 ## 1. 상황
 
-CS:APP 그림 2.19와 연습문제 2.21에 TMin<sub>32</sub>가 -2147483647-1으로 적혀있다. 왜 -2147483648, 0x80000000와 같이 적지 않았을까? C 헤더인 "limits.h"를 잘 살펴보자. TMin<sub>32</sub>, TMax<sub>32</sub>가 다음과 같이 표현되어 있다.
+CS:APP 그림 2.19와 연습문제 2.21에 TMin<sub>32</sub>가 -2147483647-1으로 적혀있다. 왜 -2147483648, 0x80000000와 같이 적지 않았을까?<!--more--> C 헤더인 "limits.h"를 잘 살펴보자. TMin<sub>32</sub>, TMax<sub>32</sub>가 다음과 같이 표현되어 있다.
 
 ``` c
 /* Minimum and maximum values a ‘signed int’ can hold. */ 

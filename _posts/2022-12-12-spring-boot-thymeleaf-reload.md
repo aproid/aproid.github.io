@@ -6,7 +6,7 @@ category: [Programming]
 thumbnail: 
 comments: true
 ---
-<span class="caps-en">S</span>pring Boot + Thymeleaf 조합을 공식적으로 밀고 있어서 많이 사용되는 것 같다. 하지만 코드가 많아지면 Spring Boot 시작 속도가 느려져서 HTML을 조금 수정하더라도 재기동하여 확인해야 하는 불편함이 있었다. Spring Framework 시절에는 Deploy 설정을 바꿔주면 새로고침만으로 적용되었지만 Spring Boot는 그런 가이드를 찾기가 어려웠다.
+<span class="caps-en">S</span>pring Boot + Thymeleaf 조합을 공식적으로 밀고 있어서 많이 사용되는 것 같다.<!--more--> 하지만 코드가 많아지면 Spring Boot 시작 속도가 느려져서 HTML을 조금 수정하더라도 재기동하여 확인해야 하는 불편함이 있었다. Spring Framework 시절에는 Deploy 설정을 바꿔주면 새로고침만으로 적용되었지만 Spring Boot는 그런 가이드를 찾기가 어려웠다.
 
 이번 글에서는 재시작 없이 Thymeleaf(HTML), Assets(Javascript, CSS) 변경 사항을 새로 고침으로 확인할 수 있는 방법을 정리하고자 한다.
 
