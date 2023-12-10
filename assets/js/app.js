@@ -40,7 +40,7 @@ $(function() {
 			hideNav: '.paginate',
 			append: '.item',
 			scrollThreshold: 100,
-			elementScroll: 'body',
+			elementScroll: '.body',
 			responseType: 'document',
 			status: '.paginate-status',
 			history: false,
@@ -48,6 +48,7 @@ $(function() {
 		});
 		
 		$itemContainer.on('append.infiniteScroll', function(e, r, p, items) {
+			console.log(e);
 			for(var i = 0; i < items.length; ++i) {
 				$(items[i]).find('.item-thumbnail-loader').lazy(lazyConfig);
 			}
