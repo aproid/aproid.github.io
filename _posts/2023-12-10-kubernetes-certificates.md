@@ -6,7 +6,7 @@ category: [Programming]
 thumbnail: 
 comments: true
 ---
-<span class="caps-en">한</span>달에 준비 끝에 Certified Kubernetes Administrator(이하 CKA), Certified Kubernetes Application Developer(이하 CKAD) 자격을 취득하였다. 해당 자격을 준비하는 분들을 위해서 여러 정보를 정리해 놓고자 한다.
+<span class="caps">한</span>달에 준비 끝에 Certified Kubernetes Administrator(이하 CKA), Certified Kubernetes Application Developer(이하 CKAD) 자격을 취득하였다. 해당 자격을 준비하는 분들을 위해서 여러 정보를 정리해 놓고자 한다.
 
 필자는 팀에서 Junior Technical Architect, Junior Application Architect 포지션을 부여받아서 일하고 있다. 업무 중에 가장 큰 비중을 차지하는 것이 중규모 Amazon Elastic Kubernetes Service(이하 Amazon EKS) 클러스터 운영 및 사내 Private Cloud 내에서 자체 Kubernetes 클러스터 구축/운영 및 레거시 서비스 이관이다.
 

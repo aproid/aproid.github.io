@@ -103,7 +103,7 @@ $article-mobile-font-size: 16px;
 		
 		position: relative;
 		float: left;
-		top: 4px;
+		top: 2px;
 		margin: 0 $article-caps-4px 0 0;
 		height: 1em;
 		line-height: 1em;
@@ -112,8 +112,9 @@ $article-mobile-font-size: 16px;
 		&-en {
 			@extend .article-caps;
 			
-			top: 4px;
+			top: 0px;
 			margin: 0 $article-caps-8px 0 0;
+			font-size: $article-caps-size-em + .475em;
 		}
 	}
 	

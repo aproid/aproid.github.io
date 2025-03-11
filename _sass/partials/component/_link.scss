@@ -14,7 +14,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: .5em;
+        height: .71875em;
         line-height: 0;
         background: $link-highlight-color;
         color: invert($link-highlight-color);
@@ -31,7 +31,7 @@
     
     &:hover {
         &::before {
-            padding: .55em 0 0 0;
+            padding: .71875em 0 0 0;
         }
     }
     
@@ -43,6 +43,24 @@
         &::before {
             background: invert($link-highlight-color);
             color: $link-highlight-color;
+        }
+    }
+
+    &-serif {
+        @extend .link;
+    }
+
+    &-monospace {
+        @extend .link;
+
+        &::before {
+            height: .5em;
+        }
+    
+        &:hover {
+            &::before {
+                padding: .55em 0 0 0;
+            }
         }
     }
 }

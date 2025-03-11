@@ -4,7 +4,7 @@
 	</div>
 	<div class="item-category">
 	    {% for category in post.category %}
-	        <a class="link" href="{{ site.baseurl }}/{{ category | slugify }}" title="{{ category }}">{{ category }}</a>
+	        <a class="link-monospace" href="{{ site.baseurl }}/{{ category | slugify }}" title="{{ category }}">{{ category }}</a>
         	{% unless forloop.last %} {% endunless %}
         {% endfor %}
 	</div>
